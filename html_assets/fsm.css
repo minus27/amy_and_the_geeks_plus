@@ -1,0 +1,138 @@
+:root {
+  --legend-bg-color: lightgray;
+}
+
+#fastly-status-map {
+  height: 350px;
+  width: 100%;
+  background-color: grey;
+}
+
+section.pop {
+  font-size: 90%;
+}
+
+section.pop div {
+  font-size: 120%;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 0.25em;
+}
+
+section.pop span {
+  font-weight: bold;
+  color: gray;
+}
+
+#fastly-status-legend {
+  margin-bottom: 20px;
+  padding: 1px;
+  background-color: var(--legend-bg-color);
+  font-family: arial;
+}
+
+#fastly-status-legend table {
+  border-collapse: collapse;
+  border: 0;
+}
+
+#fastly-status-legend table td {
+  padding: 0;
+}
+
+#tabs table tr td {
+  background-color: var(--legend-bg-color);
+  padding: 0 0.4em !important;
+  white-space: nowrap;
+  font-weight: bold;
+  text-align: center;
+  color: var(--legend-bg-color);
+}
+
+#tabs td:hover {
+  color: black;
+}
+
+#tabs .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: darkgray;
+  height: 22px;
+  width: 100%;
+}
+
+#tabs .button span {
+  display: inline-block;
+  width: 100%;
+  padding: 0px 6px;
+}
+
+#frame.status-filter #tabs .status-filter .button,
+#frame.group-filter #tabs .group-filter .button {
+  background-color: white;
+  color: black;
+  cursor: auto;
+}
+
+#options tr {
+  font-weight: bold;
+  display: none;
+}
+
+#frame.status-filter #options .status-filter,
+#frame.group-filter #options .group-filter {
+  display: table-row;
+}
+
+#tabs table, #options table {
+  height: 56.37px !important;
+}
+
+#tabs tr {
+  height: 50%;
+}
+
+#options, #options table {
+  background-color: white;
+  width: 100%;
+}
+
+#options tr td:not(:first-of-type) {
+  border-left: 1px dotted gray;
+}
+
+#tabs tr td {
+  border-right: 1px solid var(--legend-bg-color);
+}
+
+#options td[visible="0"] {
+  opacity: 30%;
+  color: gray;
+}
+
+#tabs td, #options td {
+  font-size: 75%;
+  text-align: center;
+  line-height: normal;
+  cursor: pointer;
+}
+
+button.gm-ui-hover-effect {
+    visibility: hidden;
+}
+
+/* Tweak infowindow style to center content */
+.gm-style .gm-style-iw-d {
+    padding-left: 5;
+}
+
+.legend-item {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.legend-item span {
+  margin-left: 0.5em;
+}

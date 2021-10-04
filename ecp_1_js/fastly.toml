@@ -1,0 +1,22 @@
+# This file describes a Fastly Compute@Edge package. To learn more visit:
+# https://developer.fastly.com/reference/fastly-toml/
+
+authors = ["skiel+wafdemo@fastly.com"]
+description = "A minimal boilerplate application to bootstrap JavaScript projects on Compute@Edge"
+language = "javascript"
+manifest_version = 1
+name = "modifying_proxy"
+service_id = "6rqDSpLNBA2ySNS7bhJdV6"
+
+[local_server]
+  [local_server.backends]
+    [local_server.backends.httpbin_org]
+      url = "https://httpbin.org/"
+    [local_server.backends.status_fastly_com]
+      url = "https://status.fastly.com/"
+    [local_server.backends.api_github_com]
+      url = "https://api.github.com/"
+  [local_server.dictionaries]
+    [local_server.dictionaries.settings]
+      file = "dictionary.settings.json"
+      format = "json"

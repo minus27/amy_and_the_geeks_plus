@@ -1,0 +1,50 @@
+.hidden {
+  display: none;
+}
+
+#fastly-status-panel-container {
+  font-family: arial;
+  text-align: center;
+  padding: 0.5em;
+  border: 1px solid black;
+  margin-bottom: 1em;
+}
+
+section#fsp-controls {
+  display: inline-block;
+}
+
+#fastly-status-panel-container section > div {
+  display: inline-block;
+}
+
+#fastly-status-panel-container section > div:not(:first-of-type) {
+  margin-left: 1em;
+}
+
+#fastly-status-panel-container label {
+  display: inline-block;
+  font-weight: bold;
+}
+
+#fastly-status-panel-container select {
+  padding: 4px;
+  height: auto;
+}
+
+#fsp-overrides {
+  white-space: pre;
+  font-family: monospace;
+  background-color: lightyellow;
+  margin-top: 0.5em;
+  padding: 0.25em;
+}
+
+#fsp-overrides span {
+  cursor: pointer;
+}
+
+#fsp-overrides span:hover {
+  background-color: red;
+  color: white;
+}

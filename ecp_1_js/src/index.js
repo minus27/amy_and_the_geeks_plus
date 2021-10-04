@@ -46,11 +46,17 @@ async function handleRequest(event) {
     case 'GET /fsp.js':
     case 'GET /fsp.css':
       // Prepare request from assets on GitHub
+      /*
       hostName = 'api.github.com';
       bereqOpts.backend = 'api_github_com';
-      bereqOpts.headers.set('Authorization', 'token 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');
+      bereqOpts.headers.set('Authorization', 'token XXXXX');
       bereqOpts.headers.set('Accept', 'application/vnd.github.v4.raw');
       newUrl.pathname = newUrl.pathname.replace(/([^/]+)$/, `repos/minus27/fastly-status-map/contents/aatg/$1`);
+      */
+      //https://raw.githubusercontent.com/minus27/amy_and_the_geeks_plus/main/html_assets/
+      hostName = 'raw.githubusercontent.com';
+      bereqOpts.backend = 'raw_githubusercontent_com';
+      newUrl.pathname = newUrl.pathname.replace(/([^/]+)$/, `minus27/amy_and_the_geeks_plus/main/html_assets/$1`);
       break;
     default:
       if (newUrl.pathname == '/demo.html') newUrl.pathname = '/';
@@ -89,7 +95,7 @@ async function handleRequest(event) {
 
   let berespOpts = { status: beresp.status, headers: beresp.headers };
 
-  if (bereqOpts.backend == "api_github_com") {
+  if (bereqOpts.backend == "api_github_com" || bereqOpts.backend == "raw_githubusercontent_com") {
     const mimetypes = {
       'css':'text/css',
       'html':'text/html',

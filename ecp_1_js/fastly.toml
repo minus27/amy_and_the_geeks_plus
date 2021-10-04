@@ -16,6 +16,8 @@ service_id = "6rqDSpLNBA2ySNS7bhJdV6"
       url = "https://status.fastly.com/"
     [local_server.backends.api_github_com]
       url = "https://api.github.com/"
+    [local_server.backends.raw_githubusercontent_com]
+      url = "https://raw.githubusercontent.com/"
   [local_server.dictionaries]
     [local_server.dictionaries.settings]
       file = "dictionary.settings.json"
